@@ -1,4 +1,53 @@
 1. 8 Datatypes in JS : undefined, null, Boolean, String, Symbol, BigInt, Object, Number
 2. Variable name can start with `$` and `_`, but not with a number
 3. When variable declared in Js, datatype is `undefined`. Performing an operation on `undefined` value returns NaN.
-4. 
+4. `let a="Nikita";` - a variable declared with `let` can be declared once only.
+5.  A variable declared with `const` has all features of `let` and added feature that the value is `read-only.`
+6.  Common practice among developers - Uppercase : immutable values; lowercase/ camelCase : mutable identifiers;
+7.  `%` : remainder operator, sometimes incorrectly referred as modulus operator. Similar to modulus, but does not work properly for negative numbers.
+8.  `const sheSaid="Nikita said,\"It is all about about persistence\" ";` (\ can be used to escape a quote from its interpreted meaning in JS, and just be used as any string : \ is escape character)
+9.  
+```
+\r	carriage return
+\t	tab
+\b	word boundary
+\f	form feed
+```
+10. To find length of a string, use `.length` property -> `"Nikita Sharma".length` or `thisIsAString.length`.
+11. In JS, `string values are immutable` i.e. they a character cannot be changed by accessing it using square brackets once assigned, but the whole string can be changed. Arrays are mutuable in JS.
+12. An array/ object can contain values of different data types as well. `const array=["Nikita",21];
+13. Js processed `array [1]` correctly (as `array[1]`) and also `array [1] [2]`, but one should avoid giving these spaces to prevent confusion among the programmers.
+14.  `push() on array`
+```js
+const array=["Dance",1];
+array.push(["Music", 4]);
+// array = ["Dance",1,["Music",4]];
+```
+15. We can `pop` elements from array, and `pop()` function when applied on array returns the value being popped. 
+```js
+const array=["Dance",1];
+const valuePopped=array.pop();
+console.log(valuePopped);
+console.log(array);
+```
+16. Similary, `array.shift()` to pop the first element of an array. We say it like the `shifted off` value. To add an element at the start of an array, use `unshift()`.
+```js
+const array=["Dance",1];
+array.unshift("Music");
+console.log(array);
+```
+17. No need to specify the return-type (of value being returned) during function declaration.
+```js
+function plusOne(num) {
+  return num + 1;
+}
+
+const answer = plusOne(3);
+```
+18. Variables defined outside a function-block have a global scope. Those created without `let or const` keyword are considered as `global` variables.
+19. Varibales declared within a function, and the parameters have local scope.
+20. When local and global variable are both defined with same name, then in the block (where local variable is defined), the local variable takes precedence.
+21. When return statement not written, code compiles fine and the returned value is `undefined`.
+
+
+[Start from here](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/stand-in-line)
