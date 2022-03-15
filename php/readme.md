@@ -9,7 +9,7 @@ $ cd /opt/xampp
 3. localhost `www.localhost/`
 4. Document root folder to create PHP applications 
 ```bash
-$ cd /opt/xampp/htdocs
+$ cd /opt/lampp/htdocs
 ```
 5. Create php application `$ sudo nano NameOfApplication.php`
 6. Running the application `www.localhost/MyFirstPHPApplication.php`
