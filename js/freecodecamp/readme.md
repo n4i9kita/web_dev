@@ -1,3 +1,6 @@
+## Basic Javascript
+
+
 1. 8 Datatypes in JS : undefined, null, Boolean, String, Symbol, BigInt, Object, Number
 2. Variable name can start with `$` and `_`, but not with a number
 3. When variable declared in Js, datatype is `undefined`. Performing an operation on `undefined` value returns NaN.
@@ -32,6 +35,7 @@ console.log(array);
 ```
 16. Similary, `array.shift()` to pop the first element of an array. We say it like the `shifted off` value. To add an element at the start of an array, use `unshift()`.
 ```js
+var removedElement=arr.shift();
 const array=["Dance",1];
 array.unshift("Music");
 console.log(array);
@@ -48,6 +52,22 @@ const answer = plusOne(3);
 19. Varibales declared within a function, and the parameters have local scope.
 20. When local and global variable are both defined with same name, then in the block (where local variable is defined), the local variable takes precedence.
 21. When return statement not written, code compiles fine and the returned value is `undefined`.
-
-
-[Start from here](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/stand-in-line)
+22. `Type Coercion` : type conversion performed automatically, or implicitly javascript engine. `==` type conversion happens, to check whether the value is same, it is not important that the datatype should be same here.
+23. switch-case are tested with strict equality (===)
+24. switch case for a range
+```js
+let result = "";
+switch(val) {
+  case 1:
+  case 2:
+  case 3:
+    result = "1, 2, or 3";
+    break;
+  case 4:
+    result = "4 alone";
+}
+```
+25. In an object data is accessed using the properties, which is basically the variable-name-to-which-value assigned as a key-value pair. If an object has non-string properties, then js wil typecast it into a string. Unlike array which uses index, in case of an object we mention the key for which value needs to be accessed.
+26. `.` operator and `[]` used to access the values of properties of objects. If the property name contains space, then we use `[]` to access the values.
+27.  
+28. 
