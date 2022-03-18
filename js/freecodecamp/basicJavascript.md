@@ -83,4 +83,41 @@ myObj.hasOwnProperty("middle"); // returns false
 30. `Javascript Object Notation or JSON` is a lightweight data-interchange format. It is a text format that is completely independent of a programming language but uses convention that is similar to C-family of langauges. JSON is built of 2 structures : key/value pair. [To read further abour JSON](https://www.json.org/json-en.html). JSON Types : Strings, Numbers, Booleans, null, Arrays, Objects. `Extension for a json file is .json`. Anything in json is valid javascript, and we can directly copy-paste json code in javascript. In this case though, the data (if it was object in json) will be send as a string - so put `around the json data`. We use `JSON.parse(companies)`, and now we can perform companies[0].names. We can use JSON data to transfer data from client to server, or vice-versa. 
 31. Accessing values in nested objects : `ourStorage.cabinet["top drawer"].folder2`
 32. [Read it](https://medium.com/@amaliesmidth/javascript-short-circuit-conditionals-6606bdeaa30d)
-33. 
+33. [Do this - record collection](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/record-collection)
+34. For lo.op : The initialization condition is evaluated only once and at the start of the loop, condition is checked before every iteration of the loop, the final expression is executed at the end of each loop iteration, prior to the next condition check.
+35. What makes `do...while` different loops is that it will evaluate at the first check even when the condition is false.
+36. To generate random number in JS - `Math.random()` function is used. It can generate **random decimal number** between 0(inclusive) and 1(exclusive).
+37. To generate random whole numbers - `Math.floor(Math.random()*10)` generates random numbers b/w 0 and 9.
+38. To generate a random number b/w `min` and `max` (both inclusive) - `Math.floor(Math.random() * (max - min + 1)) + min`
+39. To convert a string into an integer - `const a =parseInt("0087"); // returns 87. If the first character of string cannot be converted to integer, then it returns `NaN`. It also takes in a second argument for the radix, which specifies the base of the number in the string. Radix can be b/w 2-36.
+40. We can use nested `ternary operator - condition ? abc : xyz;`  in js.
+```js
+function countdown(n){
+   return n < 1 ? [] : [n, ...countdown(n - 1)];
+}
+
+function countdown(n){
+   return n < 1 ? [] : [n].concat(countdown(n - 1));
+}
+
+function countdown(n) {
+  if (n < 1) {
+    return [];
+  } else {
+    const arr = countdown(n - 1);
+    arr.splice(0, 0, n);
+    return arr;
+  }
+}
+
+function countdown(n) {
+  if (n < 1) {
+    return [];
+  } else {
+    const arr = countdown(n - 1);
+    arr.unshift(n);
+    return arr;
+  }
+}
+// all of the countdown() function defined performs the same task to return an array of [n,n-1,n-2,...1]
+```
