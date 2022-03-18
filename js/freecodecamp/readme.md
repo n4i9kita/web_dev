@@ -67,7 +67,20 @@ switch(val) {
     result = "4 alone";
 }
 ```
-25. In an object data is accessed using the properties, which is basically the variable-name-to-which-value assigned as a key-value pair. If an object has non-string properties, then js wil typecast it into a string. Unlike array which uses index, in case of an object we mention the key for which value needs to be accessed.
+25. In an object data is accessed using the properties, which is basically the variable-name-to-which-value assigned as a key-value pair. If an object has non-string properties, then js wil typecast it into a string. Unlike array which uses index, in case of an object we mention the key for which value needs to be accessed. To summarize, `objects in js are like a dictionary - key/value pair`.
 26. `.` operator and `[]` used to access the values of properties of objects. If the property name contains space, then we use `[]` to access the values.
-27.  
-28. 
+27.  We can add new properties to js objects the same way we modify them - using `. opertor or []`
+28. We can delete properties from objects like `delete ourDog.bark;`.
+29. To check if there is a key-value pair in the object for a specific key, we use the `object_name.hasOwnProperty(property_name)` method.
+```js
+const myObj = {
+  top: "hat",
+};
+
+myObj.hasOwnProperty("top"); //returns trye
+myObj.hasOwnProperty("middle"); // returns false
+```
+30. `Javascript Object Notation or JSON` is a lightweight data-interchange format. It is a text format that is completely independent of a programming language but uses convention that is similar to C-family of langauges. JSON is built of 2 structures : key/value pair. [To read further abour JSON](https://www.json.org/json-en.html). JSON Types : Strings, Numbers, Booleans, null, Arrays, Objects. `Extension for a json file is .json`. Anything in json is valid javascript, and we can directly copy-paste json code in javascript. In this case though, the data (if it was object in json) will be send as a string - so put `around the json data`. We use `JSON.parse(companies)`, and now we can perform companies[0].names. We can use JSON data to transfer data from client to server, or vice-versa. 
+31. Accessing values in nested objects : `ourStorage.cabinet["top drawer"].folder2`
+32. [Read it](https://medium.com/@amaliesmidth/javascript-short-circuit-conditionals-6606bdeaa30d)
+33. 
